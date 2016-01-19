@@ -1,0 +1,191 @@
+/*body {
+    background-color: #59686F;font-family: 'Lucida Grande', 'Helvetica', sans-serif;
+}
+#contentArea {
+    background-color: #C2EA85;
+    width: 150px;
+    height: 75px;
+    border-radius: 2% 20%;
+    border: 1px solid lightgreen;
+    position: absolute;
+    margin: 0 15px;
+    -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+#contentArea:hover .closebutton {
+    display: block;
+}
+ p {
+    position: relative;
+    left: 87px;
+    top: 0px;
+}
+.closebutton {
+    display: none;
+    background-image: url(deleteButton.png);
+    height: 30px;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    width: 30px;
+}
+
+.closebutton:active {
+    background-image: url(deleteButtonPressed.png);
+}*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header, 
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+article, aside, figure, footer, header, 
+hgroup, nav, section { display:block; }
+nav ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; font-size:85%; vertical-align:baseline; background:transparent; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted #000; cursor:help; }
+
+table { border-collapse:collapse; border-spacing:0; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+/* END RESET CSS */
+/*
+fonts.css from the YUI Library: developer.yahoo.com/yui/
+          Please refer to developer.yahoo.com/yui/fonts/ for font sizing percentages
+There are three custom edits:
+ * remove arial, helvetica from explicit font stack
+ * make the line-height relative and unit-less
+ * remove the pre, code styles
+*/
+body { font:13px sans-serif; /**font-size:small; *font:x-small; */line-height:1.22;background-color:#333; }
+table { /*font-size:inherit;*/ font:100%; }
+select, input, textarea { font:99% sans-serif; }
+select, input, textarea { color:#444; }
+h1,h2,h3,h4,h5,h6 { font-weight: bold;/* text-rendering: optimizeLegibility; */ }
+H1 {color:#169ea3; font-size:2.6em; }
+H2 {font-size:3.7em; color:#fff;}
+H3 {color:#fff; font-size:1.8em; font-weight:100;}
+H4 {color:#333; font-size:1.4em; }
+H5 {color:#eadddf; font-size:1.4em; font-weight:bold; }
+H6 {color:#3f4c6b; font-size:1.2em;}
+P, LI, DT, DD , SPAN {color:#929297;font-size:108%;text-align:left;line-height: 1.4em;font-family:Helvetica, Tahoma, Arial;}
+
+/* Form Elements */
+
+a:hover, a:active { outline: none; }
+
+/* Inline Elements */
+A {text-decoration: none;}
+A:hover{text-decoration:underline; }
+a:hover { color:#036; }
+ol {
+	margin-left:30px;
+	list-style-type: decimal;
+}
+small { 
+	font-size:85%;
+}
+strong, th {
+	font-weight: bold;
+}
+/* Author: Sebastiano Armeli Battana */
+H1 {font-size:3.0em;}
+DIV.wrapper {
+	margin:0px auto;
+	width:940px;
+	padding:40px 0px;
+}
+DIV#notes {
+	padding:40px 0px;
+	float:left;
+	clear:left;
+}
+DIV#notes DIV.note {
+	background-color: #C2EA85;
+    width: 150px;
+    height: 170px;
+    border-radius: 2% 20%;
+    border: 1px solid lightgreen;
+	float:left;
+	margin-right:20px;
+	margin-bottom:20px;
+	display:inline;
+	position:relative;}
+DIV#notes DIV.note P {
+	padding-bottom:10px;
+	font-size:1.5em;
+	color:#000;}
+DIV#notes DIV.note P.editable {
+	cursor:text;
+}
+DIV#notes DIV.note A {
+	font-size:1.1em;
+}
+DIV#notes DIV.note A.submit {
+	display:none;
+}
+DIV#notes DIV.note A.remove {
+	position:absolute;
+	top:0;
+	right:0;
+	width:10px;}
+
+DIV.links, DIV#counter {
+	float:left;
+	width:auto;
+	padding-top:20px;
+	clear:both;
+}
+DIV.links A , DIV.links SPAN{
+	color:#fff;
+	font-size:1.3em;
+}
+DIV.links A:hover{
+	color:#A22;
+}
+DIV.links TEXTAREA {
+	width:200px;
+	padding:10px;
+	font-size:1.5em;
+}
+DIV.links A {padding-left:10px;}
+
+DIV#counter P SPAN{
+	color:red;
+}
+
+.closebutton {
+    /* display: none; */
+    background-image: url(../img/button_delete.png);
+    height: 93px;
+    transform: scale(0.2);
+    position: absolute;
+    left: 78px;
+    top: -34px;
+    width: 109px;
+    z-index: 2000;
+}
+.text{
+	padding: 10px;
+	width: 100px;
+	height: 50px;
+}
